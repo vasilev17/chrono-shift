@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>8e1abbbd-bed6-466c-be40-a3c667c155f5</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\Fonts\goodTimes.woff" />
+    <None Include="wwwroot\Content\Images\LoginImage.jpg" />
+	<None Include="wwwroot\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="MySql.Data" Version="8.0.23" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0-m8.0.23" />
+    <PackageReference Include="Novell.Directory.Ldap.NETStandard" Version="3.6.0" />
+  </ItemGroup>
+
+</Project>

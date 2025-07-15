@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChronoShift - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/LoginStyle.css">
+    <link rel="icon" href="~/Content/Images/TabIcon.png"
+          type="image/x-icon">
+</head>
+<body>
+
+    <div class="background">
+        <div class="form-box">
+            <h1 class="chronoTitle">ChronoShift</h1>
+            <img oncontextmenu="return false" class="image" src="~/Content/Images/LoginImage.jpg" height="100%" width="60%">
+            <form id="login" class="input" method="post">
+                <input name="Username" type="text" id="Username" class="input-field" placeholder="Username" required>
+                <input name="Password" type="password" id="Password" class="input-field" placeholder="Password" required>
+                <input class="remember-me-checkbox" name="RememberMe" type="checkbox" id="RememberMe" style="margin: 30px 10px 34px 0;"> <label class="remember-me-label" for="RememberMe"> Remember me </label>             
+                <button type="submit" class="submit-btn"> Sign in </button>
+                <h1 class="ValidationError">@Html.ValidationSummary()</h1>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

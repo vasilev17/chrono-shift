@@ -1,0 +1,177 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+@namespace ChronoShift
+<link rel="stylesheet" href="~/css/IndexTable.css">
+<link rel="stylesheet" href="~/css/PopUp.css">
+@*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" />*@
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/timepicker.css" />
+
+<!-- Pop-Up HTML -->
+
+<div data-backdrop="static" data-keyboard="false" id="roleModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-box">
+            <div class="modal-body text-center">
+                <h4 style="font-size:34px">Choose Your Role</h4>
+                <p style="font-size: 20px">Since this is your first login we need you to pick your role in the system.</p>
+
+                <!---------------------Role Cards------------------------>
+
+                <div class="cards">
+                    <div class="card">
+                        <article>
+                            <h2 class="card-title">Intern</h2>
+
+                            <div class="pic"><img src="/Content/Images/Roles/intern.svg"></div>
+
+                            <div class="card-desc">As an Intern you will be able to only accept/reject internship requests and log your daily work.</div>
+
+                            <button id="select-intern-btn" class="card-btn" data-dismiss="modal">Pick</button>
+                        </article>
+                    </div>
+
+                    <div class="card">
+                        <article>
+                            <h2 class="card-title">Mentor</h2>
+
+                            <div class="pic"><img src="/Content/Images/Roles/mentor.svg"></div>
+
+                            <div class="card-desc">As a Mentor you will be able to send internship requests, see your interns' logged work and end internships.</div>
+
+                            <button id="select-mentor-btn" class="card-btn" data-dismiss="modal">Pick</button>
+                        </article>
+
+                    </div>
+
+                    <div class="card">
+                        <article>
+                            <h2 class="card-title">Manager</h2>
+
+                            <div class="pic"><img src="/Content/Images/Roles/manager.svg"></div>
+
+                            <div class="card-desc">As a Manager you will be able to send internship requests, see logged work, end internships and assign mentors to interns.</div>
+                            <button id="select-manager-btn" class="card-btn" data-dismiss="modal">Pick</button>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <!---------------------------------------------------------->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="summary">
+    <div class="row">
+        <div id="holiday" class="col-12">Working days: 22, Worked days: 00.00:00, Holidays: 22.00:00</div>
+    </div>
+</div>
+
+<!-- Table -->
+
+<div class="col-12 table">
+
+    <div class=" headline-wrapper ">
+        <div class="row text-center ">
+            <div class="col headline Months">Jan</div>
+            <div class="col headline Months">Feb</div>
+            <div class="col headline Months">Mar</div>
+            <div class="col headline Months">Apr</div>
+            <div class="col headline Months">May</div>
+            <div class="col headline Months">Jun</div>
+            <div class="col headline Months">Jul</div>
+            <div class="col headline Months">Aug</div>
+            <div class="col headline Months">Sep</div>
+            <div class="col headline Months">Oct</div>
+            <div class="col headline Months">Nov</div>
+            <div class="col headline Months">Dec</div>
+        </div>
+
+        <div class="row  active-month">
+            <div class="col-12 headline text-center current_month">
+                January 2021
+            </div>
+        </div>
+
+        <div class="row headline ">
+            <div class="col-2 headline">
+                Date
+            </div>
+            <div class="col-8 text-center headline">
+                Activity
+            </div>
+            <div class="col-2 text-center headline">
+                Time spent
+            </div>
+        </div>
+    </div>
+
+    <div class="activity-wrapper">
+        <div class="row activity-content" id="row-1">
+            <div class="col-1">
+                01
+            </div>
+            <div class="col-9  ">
+                Some very sophisticated activity, which took a very long time... about 2 working days and 3 working nights.
+            </div>
+            <div class="col-2 text-center">
+                37:20 h
+            </div>
+        </div>
+        <div class="row activity-content" id="row-2">
+            <div class="col-1">
+                02
+            </div>
+            <div class="col-9 plus-btn-activity" id="plus_btn_activity_02">
+                <textarea data-autoresize onblur="Save(2)" class="textarea activity-input" role="textbox" contenteditable></textarea>
+            </div>
+            <div class="col-2 plus-btn-time" id="plus_btn_time_01">
+                <input class="form-control timePicker" type="text">
+            </div>
+
+        </div>
+        <div class="row activity-content" id="row-31">
+            <div class="col-1">
+                31
+            </div>
+            <div class="col-9">
+                Some sophisticated activity, which took not so much time.
+            </div>
+            <div class="col-1">
+                05:10 h
+            </div>
+            <div class="col-1">
+                <button>+</button>
+            </div>
+        </div>
+        <button class=" plus radius plus-btn"></button>
+    </div>
+
+</div>
+@section Scripts{
+    <script src="~/lib/bootstrap/dist/js/timepicker.js"></script>
+    <script type="text/javascript">
+
+        $(".timePicker").timepicker({
+            minStep: 15
+        });
+
+        CheckRole();
+        CalculateWorkingDays(1, 2021);
+
+    </script>
+}
+
+
+
+
+
+
+
+
+
+

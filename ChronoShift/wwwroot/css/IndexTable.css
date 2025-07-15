@@ -1,0 +1,125 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+.table {
+    border-radius: 12px 12px 0 0;
+    border-collapse: collapse;
+    word-wrap: break-word;
+    box-shadow: 0 2px 12px rgba(32,32,32,.3);
+    background-color: #FFFFFF;
+    padding:0 ;
+}
+.activity-content:nth-child(odd) {
+    background-color: #eeeeee;
+}
+.activity-content {
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+.headline {
+    background-color: #6eccf5;
+    color: #FAFAFA;
+    font-family: 'Open Sans',Sans-serif;
+}
+.current_month {
+    font-weight: 200;
+    font-size:26px;
+}
+
+
+
+
+.plus {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(#fafafa,#fafafa), linear-gradient(#fafafa,#fafafa), #6eccf5;
+    background-position: center;
+    background-size: 50% 2px,2px 50%;
+    background-repeat: no-repeat;
+    border: none;
+    position: absolute;
+    top: 60px;
+    right: -15px;
+    transition: transform .2s;
+    border: none;
+    outline: none;
+}
+
+    .plus:focus {
+        border: none;
+        outline: none;
+    }
+
+.radius {
+    border-radius: 50%;
+    outline: none;
+}
+
+.plus:hover {
+    background: linear-gradient(#fafafa,#fafafa), linear-gradient(#fafafa,#fafafa), #3dbbf2;
+    background-position: center;
+    background-size: 50% 2px,2px 50%;
+    background-repeat: no-repeat;
+    border: none;
+    transform: scale(1.3);
+    outline: none;
+}
+
+
+
+/*-----------------------------------------------------------------*/
+textarea {
+    box-sizing: border-box;
+    resize: none;
+}
+.textarea {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: text;  
+    height: 34px;
+}
+
+
+.textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.textarea[contenteditable]:empty::before {
+        content: "Activity";
+        color: gray;
+}
+.time-input {
+    width: 100%;
+    height: 34px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border: none;
+}
+
+    .time-input:focus {
+        outline-style: auto;
+        outline-color: #21B0E8;
+    }
+
+.activity-input {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    border: none;
+    padding-left:10px;
+}
+
+    .activity-input:focus {
+        outline-style: auto;
+        outline-color: #21B0E8;
+    }
+.plus-btn-time{
+    padding-right : 0;
+}
+.activity-wrapper{
+    position:relative;
+    padding: 0 15px ;
+}
+.headline-wrapper {
+    border-radius: 12px 12px 0 0;
+    overflow:hidden;
+}

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="icon" href="~/Content/Images/TabIcon.png"
+          type="image/x-icon">
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChronoShift - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/Navbar.css" />
+    <link rel="stylesheet" href="/Content/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
+            <div class="container">
+                <a class="unselectable navbar-title" asp-controller="Home" asp-action="Index">ChronoShift</a>
+
+                <div class="nav nav-pills">
+                    <div class="dropdown">
+                        <i class="bi bi-bell-fill navbar-icons " type="button" data-toggle="dropdown">
+
+                            <span class="caret"></span>
+                        </i>
+                        <ul class="dropdown-menu animate slideIn">
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <i class="bi bi-person-fill navbar-icons" type="button" data-toggle="dropdown">
+
+                            <span class="caret"></span>
+                        </i>
+                        <ul class="dropdown-menu animate slideIn">
+                            <li>
+                                <a class="dropdown-sector" href="#">
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-sector" href="Connections">
+                                    <span>Connections</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-sector" href="LogOut">
+                                    <span>Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

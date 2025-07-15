@@ -1,0 +1,149 @@
+﻿
+/*Modal (Pop-up) Styles*/
+.modal-confirm {
+    color: #434e65;
+    
+}
+
+.modal-box {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    right:50%;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 1010px;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-confirm.modal-dialog {
+    margin-top: 7em;
+}
+
+
+
+
+/*Cards Styles*/
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap");
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .cards .card {
+        height: 440px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.1);
+        width:inherit;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.4s ease;
+        margin: 0 10px;
+    }
+
+        .cards .card:before {
+            height: 190px;
+            width: calc(100% + 100px);
+            content: "";
+            position: absolute;
+            background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+            border-radius: 4px 4px 100% 100%;
+            transition: all 0.4s ease-out;
+            top: 0;
+        }
+
+        .cards .card article {
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+            .cards .card article h2 {
+                color: white;
+                margin: 0;
+                padding: 40px 20px 10px 20px;
+                font-weight: 500;
+                font-size: 24px;
+                letter-spacing: 0.5px;
+            }
+
+            .cards .card article .card-desc {
+                padding: 10px 30px;
+                font-size: 16px;
+                text-align: center;
+                line-height: 24px;
+                color: #666;
+                height: 90px;
+                transition: all 0.4s ease-out;
+            }
+
+            .cards .card article .pic {
+                width: 120px;
+                height: 120px;
+                overflow: hidden;
+                border-radius: 100%;
+                margin: 20px 0;
+                box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+                transition: all 0.6s ease;
+            }
+
+                .cards .card article .pic img {
+                    width: 100%;
+                    filter: grayscale(100%);
+                }
+
+        .cards .card:hover {
+            transform: translateY(-10px);
+            border: 1px solid #007bff;
+        }
+
+            .cards .card:hover .pic {
+                box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.3);
+            }
+
+                .cards .card:hover .pic img {
+                    -webkit-filter: grayscale(0%);
+                    filter: grayscale(0%);
+                }
+
+    .cards .card-btn {
+        color: white;
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        transition: 0.2s;
+        cursor: pointer;
+        width: 125px;
+        outline: none;
+        text-align: center;
+        background: linear-gradient(155deg, #43beea, #2457d6);
+        border: none;
+    }
+
+        .cards .card-btn:hover {
+            box-shadow: 0px 2px 15px #43beea;
+        }
+
+
+.card-title, .card-desc {
+    font-family: "Barlow", sans-serif;
+}
