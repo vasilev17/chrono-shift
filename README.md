@@ -3,7 +3,7 @@
 
 <h1>⌛ ChronoShift — Activity & Time Tracking Portal</h1>
   
-<p>An ASP.NET Core web-app that streamlines daily activity logging and holiday calculation for company interns and full time employees</p>
+<p>An ASP.NET Core web-app that streamlines daily activity logging and holiday calculation for company interns and full time employees.</p>
 
 <div>
   <img src="https://img.shields.io/badge/Team%20-%20Project%20-%20gray?logo=codecrafters&labelColor=orange" style="height: 30px; width: auto;">
@@ -16,10 +16,13 @@
 
 ## 🏷️ Features
 
-- **Active Directory Sign-In** – Authenticate with your university / company Active Directory credentials
-- **Role-Based UI** – Pick between *Intern*, *Mentor*, *Manager* on first login or get assigned as an *Administrator* and unlock just the dashboards you need
-- **In-Line Timesheet Editing** – Add, overwrite or delete activities for any day, complete with duration and description, in a single editable grid
-- **Smart Holiday Overview** – Automatic conversion of logged hours to working-days and real-time calculation of remaining leave
+- **Active Directory Sign-In** – Authenticate with your university / company Active Directory credentials.
+  
+- **Role-Based UI** – Pick between *Intern*, *Mentor*, *Manager* on first login or get assigned as an *Administrator* and unlock just the dashboards you need.
+  
+- **In-Line Timesheet Editing** – Add, overwrite or delete activities for any day, complete with duration and description, in a single editable grid.
+  
+- **Smart Holiday Overview** – Automatic conversion of logged hours to working-days and real-time calculation of remaining leave.
 
 ---
 
